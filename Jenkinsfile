@@ -11,8 +11,9 @@ pipeline {
         }
     }
       stage('Build Stage') {
-            steps {
-                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\TestPipeline\\JenkinsWebApplicationDemo.sln --configuration Release'
-            }
-        }
+    steps {
+        bat '"\\usr\\lib64\\dotnet\\sdk\\8.0.112\\MSBuild.dll" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\TestPipeline\\JenkinsWebApplicationDemo.sln" /p:Configuration=Release'
+    }
+}
+        
 }
