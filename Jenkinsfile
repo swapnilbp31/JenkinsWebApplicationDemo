@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout Stage') {
             steps {
-                git  'https://github.com/swapnilbp31/JenkinsWebApplicationDemo.git', branch: 'main'
+               git url: 'https://github.com/swapnilbp31/JenkinsWebApplicationDemo.git', branch: 'main'
             }
         }
     }
