@@ -10,4 +10,9 @@ pipeline {
             }
         }
     }
+      stage('Build Stage') {
+            steps {
+                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\TestPipeline\\JenkinsWebApplicationDemo.sln --configuration Release'
+            }
+        }
 }
